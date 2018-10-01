@@ -89,5 +89,6 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/workspace/CucumberMon/src/lib/selenium-htmlunit-driver-2.29.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

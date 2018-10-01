@@ -65,13 +65,18 @@ public class TestBase {
 	        options.addArguments("window-size=1200x600");
 	        WebDriver driver = new ChromeDriver(options);
 		}
+		else if(browserName.equals("htmlunit")){
+			System.out.println("----69--------htmlunit---------");
+	        WebDriver driver = new HtmlUnitDriver();
+	        System.out.println("----71--------htmlunit---------");
+		}
 		
-		
+		/*//for event firing
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
-		driver = e_driver;
+		driver = e_driver;*/
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
