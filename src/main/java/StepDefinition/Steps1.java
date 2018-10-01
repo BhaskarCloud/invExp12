@@ -84,7 +84,7 @@ public class Steps1  extends TestBase {
 	public void takefoto() throws IOException {
 	 File scrFile = ((TakesScreenshot) driver)
              .getScreenshotAs(OutputType.FILE);
-     //FileUtils.copyFile(scrFile, new File("pathTOSaveFile")); 001
+     //FileUtils.copyFile(scrFile, new File("pathTOSaveFile"));  001
      
 	 //String currentDir = System.getProperty("user.dir"); // 002
 		
