@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -27,7 +28,7 @@ public static void main(String[] args) throws IOException {
 		HomePage homePage;
 
 		ActivityPage activityPage = null;
-
+//driver = new HtmlUnitDriver();
 		System.setProperty("webdriver.chrome.driver", "BrowserServers\\chromedriver.exe");	
 		driver = new ChromeDriver(); 
 		String url = "http://clientworksqa.lpl.com";
