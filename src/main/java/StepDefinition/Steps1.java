@@ -41,7 +41,7 @@ public class Steps1  extends TestBase {
 		System.out.println("----This will run after scenario--");
 		driver.quit();
 	}
-	@Before("@Firstuuu")
+/*	@Before("@Firstuuu")
 	public void StartUp1() {
 		System.out.println("---------------45------------------");
 		System.out.println("----This will run before First scenario--");
@@ -52,13 +52,15 @@ public class Steps1  extends TestBase {
 		System.out.println("---------------51------------------");
 		System.out.println("----This will run after First scenario--");
 		driver.quit();
-	}
+	}*/
 	
 	@Given("^Home Page is loaded and verified$")
 	public void home_Page_is_loaded_and_verified() throws Throwable {
 		initialization();
 		loginPage = new LoginPage();
+		//waitt(30);
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
+		waitt(35);
 		String ActualTitle = homePage.verifyHomePageTitle();
 		System.out.println(ActualTitle);
 		//Assert.assertEquals("[]Client Management", ActualTitle);

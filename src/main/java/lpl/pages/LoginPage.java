@@ -45,11 +45,10 @@ public class LoginPage extends TestBase{
 	public HomePage login(String un, String pwd){
 		username.sendKeys(un);
 		password.sendKeys(pwd);
-		//loginBtn.click();
-		    	JavascriptExecutor js = (JavascriptExecutor)driver;
-		    	js.executeScript("arguments[0].click();", submitButton);
-		    	
-		    	
+		submitButton.click();
+		//    	JavascriptExecutor js = (JavascriptExecutor)driver;
+		  //  	js.executeScript("arguments[0].click();", submitButton);
+		    	 	
 		    
 		
 		return new HomePage();

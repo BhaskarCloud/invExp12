@@ -24,13 +24,14 @@ public class TestUtil extends TestBase{
 	public static long IMPLICIT_WAIT = 20;
 	public static String ResultsFolderPath = "Results";
 	public static String TESTDATA_SHEET_PATH = "src\\main\\java\\lpl\\testdata\\LplTestData.xlsx";
+	public static String TESTDATA_CSV_PATH = "src\\main\\java\\lpl\\testdata\\Demo1.csv";
 	public static String CurrentDateAndTime;
 	static Workbook book;
 	static Sheet sheet;
 	
 	
 	public void switchToFrame(){
-		driver.switchTo().frame("mainpanel");
+		driver.switchTo().frame("newFrameName");
 	}
 	
 	public static Object[][] getTestData(String sheetName) {
