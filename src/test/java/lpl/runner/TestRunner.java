@@ -6,7 +6,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)				
 @CucumberOptions(features="Features",
-				glue={"StepDefinition"})	
+				glue={"StepDefinition"},
+				tags= {"~@Second"})	// this will skip @Second tag scenario
 public class TestRunner {
 
 }

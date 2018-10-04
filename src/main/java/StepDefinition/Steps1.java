@@ -60,7 +60,7 @@ public class Steps1  extends TestBase {
 		loginPage = new LoginPage();
 		//waitt(30);
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		waitt(35);
+		//waitt(35);
 		String ActualTitle = homePage.verifyHomePageTitle();
 		System.out.println(ActualTitle);
 		//Assert.assertEquals("[]Client Management", ActualTitle);
@@ -80,7 +80,7 @@ public class Steps1  extends TestBase {
 		
 		Assert.assertTrue("Activities Lable is not dysplayed", activityPage.verifydateFilter());
 		System.out.println("Activity Page is loaded and verified");
-		
+		driver.quit();
 	    //throw new PendingException();
 	}
 	public void takefoto() throws IOException {
