@@ -14,7 +14,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -51,7 +53,11 @@ public class TestBase {
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
-			
+			/*File pathToBinary = new File("C:\\Users\\bkhimani\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
+			FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
+			FirefoxProfile firefoxProfile = new FirefoxProfile();
+			FirefoxDriver driver = new FirefoxDriver(ffBinary,firefoxProfile);*/
+			System.setProperty("webdriver.firefox.bin", "C:\\Users\\bkhimani\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
 			System.setProperty("webdriver.gecko.driver", "BrowserServers\\geckodriver.exe");	
 			driver = new FirefoxDriver(); 
 		}
