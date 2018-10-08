@@ -7,37 +7,38 @@ import java.util.List;
 import au.com.bytecode.opencsv.CSVReader;
 
 public class ReadCsvFiles {
+	public static String Myurl;
+	
+	public static void main(String[] args) throws Exception {
 
- public static void main(String[] args) throws Exception {
-    
- // This will load csv file 
- CSVReader reader = new CSVReader(new FileReader(TestUtil.TESTDATA_CSV_PATH));
+		// This will load csv file
+		CSVReader reader = new CSVReader(new FileReader(TestUtil.TESTDATA_CSV_PATH));
 
- // this will load content into list
-  List<String[]> list=reader.readAll();
-  System.out.println("Total rows which we have is "+list.size());
-            
- // create Iterator reference
-  Iterator<String[]>i1= list.iterator();
-    
- // Iterate all values 
- while(i1.hasNext()){
-     
- String[] stringArray=i1.next();
-   
- System.out.print(" Values are ");
+		// this will load content into list
+		List<String[]> list = reader.readAll();
+		System.out.println("Total rows which we have is " + list.size());
 
- for(int i=0;i<stringArray.length;i++)
-{
+		// create Iterator reference
+		Iterator<String[]> i1 = list.iterator();
 
-   System.out.print(" "+stringArray[i]+"\t");
+		// Iterate all values
+		while (i1.hasNext()) {
 
-}
-   System.out.println("   ");
-     
-    
-}
+			String[] stringArray = i1.next();
 
-}
+			System.out.print(" Values are ");
+
+			for (int i = 0; i < stringArray.length; i++) {
+
+				System.out.print(" " + stringArray[i] + "\t");
+					if (stringArray[i]=="url" ) {
+							 Myurl =stringArray[i+1];
+							 System.out.println(" -----  "+Myurl);
+			}
+			System.out.println("   ");
+			}
+		}
+		 System.out.println(" -----  "+Myurl);
+	}
 
 }

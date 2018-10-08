@@ -1,6 +1,5 @@
 package lpl.base;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,9 +13,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -27,7 +24,7 @@ public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
-	public  static EventFiringWebDriver e_driver;
+	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	
 	public TestBase(){
@@ -53,10 +50,7 @@ public class TestBase {
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
-			/*File pathToBinary = new File("C:\\Users\\bkhimani\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
-			FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
-			FirefoxProfile firefoxProfile = new FirefoxProfile();
-			FirefoxDriver driver = new FirefoxDriver(ffBinary,firefoxProfile);*/
+			
 			System.setProperty("webdriver.firefox.bin", "C:\\Users\\bkhimani\\AppData\\Local\\Mozilla Firefox\\firefox.exe");
 			System.setProperty("webdriver.gecko.driver", "BrowserServers\\geckodriver.exe");	
 			driver = new FirefoxDriver(); 
@@ -69,20 +63,20 @@ public class TestBase {
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments("headless");
 	        options.addArguments("window-size=1200x600");
-	        WebDriver driver = new ChromeDriver(options);
+	         driver = new ChromeDriver(options);
 		}
 		else if(browserName.equals("htmlunit")){
-			System.out.println("----69--------htmlunit---------");
-	        WebDriver driver = new HtmlUnitDriver();
-	        System.out.println("----71--------htmlunit---------");
+			
+	        driver = new HtmlUnitDriver();
+	   
 		}
 		
-		/*//for event firing
+		//for event firing
 		e_driver = new EventFiringWebDriver(driver);
 		// Now create object of EventListerHandler to register it with EventFiringWebDriver
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
-		driver = e_driver;*/
+		driver = e_driver;
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
@@ -94,7 +88,7 @@ public class TestBase {
 	}
 	
 	
-	protected static boolean waitt(int timeInSec) //LINE 597
+	protected static boolean waitt(long timeInSec) //LINE 597
 	{
 		boolean stepStatus;
 		try
