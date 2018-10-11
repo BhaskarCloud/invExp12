@@ -17,6 +17,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import com.lpl.config.ConfigProperties;
+import com.lpl.service.AutomationService;
+
 import lpl.util.TestUtil;
 import lpl.util.WebEventListener;
 
@@ -40,8 +43,16 @@ public class TestBase {
 		}
 	}
 	
+	public static void initialization() {
+		AutomationService automationService = new AutomationService();
+		
+		driver = automationService.initialize("Config.properties");
+		 
+		ConfigProperties prop  = new ConfigProperties("Config.properties");
 	
-	public static void initialization(){
+	 	driver.get(prop.getURL());
+	}
+	public static void initializationOld(){
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
