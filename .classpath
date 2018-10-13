@@ -92,5 +92,33 @@
 	<classpathentry kind="lib" path="C:/workspace/CucumberMon/src/lib/selenium-htmlunit-driver-2.29.0.jar"/>
 	<classpathentry kind="lib" path="C:/workspace/CucumberMon/src/lib/opencsv-2.3.jar"/>
 	<classpathentry kind="lib" path="C:/workspace/CucumberMon/Framework11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bkhimani/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar" sourcepath="C:/Users/bkhimani/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="info.cukes"/>
+			<attribute name="maven.artifactId" value="cucumber-core"/>
+			<attribute name="maven.version" value="1.2.5"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/bkhimani/.m2/repository/org/seleniumhq/selenium/selenium-api/3.14.0/selenium-api-3.14.0.jar" sourcepath="C:/Users/bkhimani/.m2/repository/org/seleniumhq/selenium/selenium-api/3.14.0/selenium-api-3.14.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-api"/>
+			<attribute name="maven.version" value="3.14.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/bkhimani/Downloads/selenium-server-standalone-3.14.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bkhimani/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar" sourcepath="C:/Users/bkhimani/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="info.cukes"/>
+			<attribute name="maven.artifactId" value="cucumber-java"/>
+			<attribute name="maven.version" value="1.2.5"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

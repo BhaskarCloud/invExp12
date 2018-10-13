@@ -15,7 +15,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import lpl.base.TestBase;
 import lpl.pages.ActivityPage;
-import lpl.pages.HomePage;
+import lpl.pages.DashboardPage;
 import lpl.pages.LoginPage;
 
 public class Psvm extends TestBase {
@@ -25,7 +25,7 @@ public class Psvm extends TestBase {
 
 public static void main(String[] args) throws IOException {
 		LoginPage loginPage;
-		HomePage homePage;
+		DashboardPage homePage;
 
 		ActivityPage activityPage = null;
 //driver = new HtmlUnitDriver();

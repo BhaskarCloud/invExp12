@@ -22,8 +22,8 @@ public class LoginPage extends TestBase{
 	@FindBy(id = "submitBtn")
 	private WebElement submitButton;
 	
-	@FindBy(xpath="//button[contains(text(),'Sign Up')]")
-	WebElement signUpBtn;
+	@FindBy(xpath="//button[contains(text(),'Sign In')]")
+	WebElement signInBtn;
 	
 	@FindBy(id="loginform-cw-header")
 	WebElement ClientWorksLogo;
@@ -42,16 +42,16 @@ public class LoginPage extends TestBase{
 		return ClientWorksLogo.isDisplayed();
 	}
 	
-	public HomePage login(String un, String pwd){
+	public DashboardPage login(String un, String pwd){
 		username.sendKeys(un);
 		password.sendKeys(pwd);
-		submitButton.click();
+		signInBtn.click();
 		//    	JavascriptExecutor js = (JavascriptExecutor)driver;
 		  //  	js.executeScript("arguments[0].click();", submitButton);
 		    	 	
 		    
 		
-		return new HomePage();
+		return new DashboardPage();
 	}
 	
 	
